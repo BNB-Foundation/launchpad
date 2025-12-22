@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNB Launchpad - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            300: '#d4d4d8',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b',
+                            950: '#09090b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-zinc-900 text-zinc-50 min-h-screen">
+    <!-- Demo Banner -->
+    <div class="bg-gradient-to-r from-orange-500/20 to-orange-600/20 border-b border-orange-500/30">
+        <div class="container mx-auto px-4 py-3 text-center">
+            <p class="text-orange-200 text-sm font-medium">
+                🎭 <strong>Static Demo</strong> - Preview of BNB Launchpad UI. Deploy contracts for live functionality.
+            </p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🔥</span>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                    BNB Launchpad
+                </h1>
+            </div>
+            <nav class="flex items-center gap-4">
+                <a href="#" class="text-zinc-50 font-medium">Presales</a>
+                <a href="#" class="text-zinc-400 hover:text-zinc-50 transition-colors">Launch</a>
+                <button class="px-4 py-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                    Connect Wallet
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <div class="container mx-auto px-4 py-12">
+            <!-- Hero Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                        Launch Your Token
+                    </span>
+                </h1>
+                <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+                    The premier decentralized launchpad on BNB Chain. Fair, transparent, and secure token presales.
+                </p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex justify-center gap-4 mb-8 flex-wrap">
+                <button class="px-6 py-2 rounded-lg font-medium bg-gradient-to-r from-orange-500 to-orange-600">
+                    All
+                </button>
+                <button class="px-6 py-2 rounded-lg font-medium bg-zinc-800 hover:bg-zinc-700 transition-all">
+                    Active
+                </button>
+                <button class="px-6 py-2 rounded-lg font-medium bg-zinc-800 hover:bg-zinc-700 transition-all">
+                    Upcoming
+                </button>
+                <button class="px-6 py-2 rounded-lg font-medium bg-zinc-800 hover:bg-zinc-700 transition-all">
+                    Ended
+                </button>
+            </div>
+
+            <!-- Presale Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Active Presale -->
+                <div class="bg-zinc-800/50 border border-zinc-700 rounded-lg p-6 hover:border-orange-500/50 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-zinc-50">DeFi Token (DEFI)</h3>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-500/30">
+                            Active
+                        </span>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Rate</span>
+                            <span class="text-zinc-50 font-medium">1 BNB = 1,000 DEFI</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Soft Cap</span>
+                            <span class="text-zinc-50 font-medium">10 BNB</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Hard Cap</span>
+                            <span class="text-zinc-50 font-medium">50 BNB</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-zinc-400">Progress</span>
+                            <span class="text-zinc-50 font-medium">25 / 50 BNB (50%)</span>
+                        </div>
+                        <div class="w-full bg-zinc-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between text-sm text-zinc-400 mb-4">
+                        <span>Ends in 6 days 23 hours</span>
+                    </div>
+
+                    <button class="w-full py-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Upcoming Presale -->
+                <div class="bg-zinc-800/50 border border-zinc-700 rounded-lg p-6 hover:border-orange-500/50 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-zinc-50">Metaverse Coin (META)</h3>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full border border-blue-500/30">
+                            Upcoming
+                        </span>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Rate</span>
+                            <span class="text-zinc-50 font-medium">1 BNB = 2,000 META</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Soft Cap</span>
+                            <span class="text-zinc-50 font-medium">20 BNB</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Hard Cap</span>
+                            <span class="text-zinc-50 font-medium">100 BNB</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-zinc-400">Progress</span>
+                            <span class="text-zinc-50 font-medium">0 / 100 BNB (0%)</span>
+                        </div>
+                        <div class="w-full bg-zinc-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between text-sm text-zinc-400 mb-4">
+                        <span>Starts in 23 hours</span>
+                    </div>
+
+                    <button class="w-full py-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Ended Presale -->
+                <div class="bg-zinc-800/50 border border-zinc-700 rounded-lg p-6 hover:border-orange-500/50 transition-all opacity-75">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-zinc-50">Gaming Token (GAME)</h3>
+                        <span class="px-3 py-1 bg-zinc-500/20 text-zinc-400 text-xs font-medium rounded-full border border-zinc-500/30">
+                            Finalized
+                        </span>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Rate</span>
+                            <span class="text-zinc-50 font-medium">1 BNB = 500 GAME</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Soft Cap</span>
+                            <span class="text-zinc-50 font-medium">5 BNB</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-zinc-400">Hard Cap</span>
+                            <span class="text-zinc-50 font-medium">25 BNB</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-zinc-400">Progress</span>
+                            <span class="text-zinc-50 font-medium">25 / 25 BNB (100%)</span>
+                        </div>
+                        <div class="w-full bg-zinc-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between text-sm text-zinc-400 mb-4">
+                        <span>Ended 1 day ago</span>
+                    </div>
+
+                    <button class="w-full py-2 bg-zinc-700 rounded-lg font-medium cursor-not-allowed" disabled>
+                        Presale Ended
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-zinc-500 text-sm">
+            BNB Launchpad - Decentralized Presales on BNB Chain
+        </div>
+    </footer>
+</body>
+</html>
